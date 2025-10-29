@@ -1,0 +1,110 @@
+# ┌──────────────────────────────────────────────┐
+# │ Project : Rulingvo AI System                 │
+# │ Author  : Mr.DosMa                           │
+# │ Year    : 2025                               │
+# │ Langs   : Uzbek / English / Russian          │
+# ├──────────────────────────────────────────────┤
+# │ Ushbu kod Rulingvo loyihasiga tegishli.     │
+# │ This code is property of Rulingvo Project.   │
+# │ Этот код принадлежит проекту Rulingvo.      │
+# └──────────────────────────────────────────────┘
+
+# docker-compose.yml - Full Stack Setup
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    container_name: russian_learner_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: russian_learner
+      POSTGRES_USER: bot_user
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme123}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bot_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis Cache
+  redis:
+    image: redis:7-alpine
+    container_name: russian_learner_redis
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  # Bot Application
+  bot:
+    build: .
+    container_name: russian_learner_bot
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      # Telegram
+      TELEGRAM_BOT_TOKEN: ${TELEGRAM_BOT_TOKEN}
+      ADMIN_IDS: ${ADMIN_IDS}
+
+      # OpenAI
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4}
+
+      # Database
+      DATABASE_URL: postgresql://bot_user:${DB_PASSWORD:-changeme123}@postgres:5432/russian_learner
+
+      # Redis
+      REDIS_URL: redis://redis:6379/0
+      USE_REDIS: "True"
+
+      # Settings
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+      NOTIFICATION_TIME_HOUR: ${NOTIFICATION_TIME_HOUR:-9}
+      DAILY_GOAL_XP: ${DAILY_GOAL_XP:-50}
+
+      # Sentry (optional)
+      SENTRY_DSN: ${SENTRY_DSN:-}
+    volumes:
+      - ./temp:/app/temp
+      - ./audio:/app/audio
+      - ./logs:/app/logs
+    command: python bot.py
+
+  # Database Admin (optional)
+  adminer:
+    image: adminer
+    container_name: russian_learner_adminer
+    restart: unless-stopped
+    depends_on:
+      - postgres
+    ports:
+      - "8080:8080"
+    environment:
+      ADMINER_DEFAULT_SERVER: postgres
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  default:
+    name: russian_learner_network
