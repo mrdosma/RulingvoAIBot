@@ -357,7 +357,7 @@ MIT License - see [LICENSE](LICENSE) file for details
 
 ## 📞 Support
 
-- 📧 Email: support@example.com
+- 📧 Email: Aytishnikman@gmail.com
 - 💬 Telegram: [@Other Sources](https://t.me/Aytishnikman)
 - 🐛 Issues: [GitHub Issues](https://github.com/mrdosma/RulingvoAIBot/issues)
 - 💬 Support Group: [@RuLingvo Support](https://t.me/+km2UA4Llm8dmOTQy)
@@ -384,4 +384,5 @@ Made with ❤️ for Russian language learners worldwide
 
 # © 2025 Mr.DosMa | Rulingvo Project
 # All rights reserved / Все права защищены / Barcha huquqlar himoyalangan.
+
 
