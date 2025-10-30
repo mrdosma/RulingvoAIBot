@@ -6,6 +6,22 @@ A comprehensive Telegram bot for learning Russian language with AI-powered featu
 [![Aiogram](https://img.shields.io/badge/Aiogram-3.x-green.svg)](https://aiogram.dev/)
 [![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-orange.svg)](https://openai.com/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+<br>
+ <a href="https://t.me/aytishnikman">
+    &nbsp;<img src="https://img.shields.io/badge/Aytishnikman%20%F0%9D%95%8F%20Channel-blue?style=flat-square&logo=telegram" width="130" height="18">&nbsp;
+  </a>
+  <a href="https://t.me/+km2UA4Llm8dmOTQy">
+    &nbsp;<img src="https://img.shields.io/badge/RulingvoAI%20%F0%9D%95%8F%20Support-Group-blue?style=flat-square&logo=telegram" width="130" height="18">&nbsp;
+  </a>
+  <br>
+<br>
+<a href="https://github.com/mrdosma/RulingvoAIBot/stargazers">
+    <img src="https://img.shields.io/github/stars/mrdosma/RulingvoAIBot?style=social">
+  </a>
+  <a href="https://github.com/mrdosma/RulingvoAIBot/fork">
+    <img src="https://img.shields.io/github/forks/mrdosma/RulingvoAIBot?label=Fork&style=social">
+  </a>  
+</p>
 
 ## ✨ Features
 
@@ -368,3 +384,4 @@ Made with ❤️ for Russian language learners worldwide
 
 # © 2025 Mr.DosMa | Rulingvo Project
 # All rights reserved / Все права защищены / Barcha huquqlar himoyalangan.
+
