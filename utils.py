@@ -1,3 +1,14 @@
+# ┌──────────────────────────────────────────────┐
+# │ Project : Rulingvo AI System                 │
+# │ Author  : Mr.DosMa                           │
+# │ Year    : 2025                               │
+# │ Langs   : Uzbek / English / Russian          │
+# ├──────────────────────────────────────────────┤
+# │ Ushbu kod Rulingvo loyihasiga tegishli.     │
+# │ This code is property of Rulingvo Project.   │
+# │ Этот код принадлежит проекту Rulingvo.      │
+# └──────────────────────────────────────────────┘
+
 # utils.py - Utility Functions
 import re
 import hashlib

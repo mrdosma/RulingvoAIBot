@@ -1,4 +1,4 @@
-# 🇷🇺 Russian Learner Bot
+# 🇷🇺 RulingvoAIBot
 
 A comprehensive Telegram bot for learning Russian language with AI-powered features, gamification, and interactive exercises.
 
@@ -78,8 +78,8 @@ A comprehensive Telegram bot for learning Russian language with AI-powered featu
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/russian-learner-bot.git
-cd russian-learner-bot
+git clone https://github.com/mrdosma/RulingvoAIBot.git
+cd RulingvoAIBot
 ```
 
 2. **Install dependencies**
@@ -143,13 +143,13 @@ docker-compose down
 
 ```bash
 # Build image
-docker build -t russian-learner-bot .
+docker build -t RulingvoAIBot .
 
 # Run container
 docker run -d \
   --name russian-bot \
   --env-file .env \
-  russian-learner-bot
+  RulingvoAIBot
 ```
 
 ## ☁️ Deploy to Railway
@@ -342,8 +342,9 @@ MIT License - see [LICENSE](LICENSE) file for details
 ## 📞 Support
 
 - 📧 Email: support@example.com
-- 💬 Telegram: [@yourusername](https://t.me/yourusername)
-- 🐛 Issues: [GitHub Issues](https://github.com/yourusername/russian-learner-bot/issues)
+- 💬 Telegram: [@Other Sources](https://t.me/Aytishnikman)
+- 🐛 Issues: [GitHub Issues](https://github.com/mrdosma/RulingvoAIBot/issues)
+- 💬 Support Group: [@RuLingvo Support](https://t.me/+km2UA4Llm8dmOTQy)
 
 ## 📸 Screenshots
 
@@ -364,3 +365,6 @@ MIT License - see [LICENSE](LICENSE) file for details
 Made with ❤️ for Russian language learners worldwide
 
 **Start learning Russian today!** 🇷🇺📚✨
+
+# © 2025 Mr.DosMa | Rulingvo Project
+# All rights reserved / Все права защищены / Barcha huquqlar himoyalangan.

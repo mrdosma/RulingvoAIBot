@@ -1,4 +1,4 @@
-# 🚀 Deployment Guide - Russian Learner Bot
+# 🚀 Deployment Guide - RulingvoAIBot
 
 Complete guide for deploying your bot to various platforms.
 
@@ -243,9 +243,9 @@ pip3 install -r requirements.txt
 6. **Configure Database**
 ```bash
 sudo -u postgres psql
-CREATE DATABASE russian_learner;
+CREATE DATABASE RulingvoAIBot;
 CREATE USER bot_user WITH PASSWORD 'secure_password';
-GRANT ALL PRIVILEGES ON DATABASE russian_learner TO bot_user;
+GRANT ALL PRIVILEGES ON DATABASE RulingvoAIBot TO bot_user;
 \q
 ```
 
@@ -343,9 +343,9 @@ sudo apt install python3.11 python3-pip python3-venv \
 6. **Configure PostgreSQL**
 ```bash
 sudo -u postgres psql
-CREATE DATABASE russian_learner;
+CREATE DATABASE RulingvoAIBot;
 CREATE USER bot_user WITH ENCRYPTED PASSWORD 'your_secure_password';
-GRANT ALL PRIVILEGES ON DATABASE russian_learner TO bot_user;
+GRANT ALL PRIVILEGES ON DATABASE RulingvoAIBot TO bot_user;
 \q
 ```
 
@@ -567,7 +567,7 @@ sentry_sdk.init(dsn="your-sentry-dsn")
 **Database Backup:**
 ```bash
 # Automated daily backup
-0 2 * * * pg_dump russian_learner > /backup/db_$(date +\%Y\%m\%d).sql
+0 2 * * * pg_dump RulingvoAIBot > /backup/db_$(date +\%Y\%m\%d).sql
 ```
 
 **Files Backup:**
@@ -583,7 +583,7 @@ sentry_sdk.init(dsn="your-sentry-dsn")
 git pull origin main
 
 # 2. Backup database
-pg_dump russian_learner > backup.sql
+pg_dump RulingvoAIBot > backup.sql
 
 # 3. Install new dependencies
 pip install -r requirements.txt
@@ -616,7 +616,7 @@ sudo netstat -tulpn | grep :8080
 
 ```bash
 # Test connection
-psql -h localhost -U bot_user -d russian_learner
+psql -h localhost -U bot_user -d RulingvoAIBot
 
 # Check PostgreSQL status
 sudo systemctl status postgresql
@@ -648,3 +648,6 @@ If you encounter issues:
 ---
 
 **Happy Deploying! 🚀**
+
+# © 2025 Mr.DosMa | Rulingvo Project
+# All rights reserved / Все права защищены / Barcha huquqlar himoyalangan.
