@@ -75,6 +75,7 @@ A comprehensive Telegram bot for learning Russian language with AI-powered featu
 - Switch language anytime in settings
 - All buttons and menus translated
 
+
 ### 🔔 Smart Features
 - Daily learning reminders
 - Spaced repetition notifications
@@ -384,5 +385,6 @@ Made with ❤️ for Russian language learners worldwide
 
 # © 2025 Mr.DosMa | Rulingvo Project
 # All rights reserved / Все права защищены / Barcha huquqlar himoyalangan.
+
 
 
